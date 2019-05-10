@@ -7,7 +7,7 @@ class Map extends React.Component {
 
   render(){
     if(this.props.locationObj){
-      var renderedMap = (<img src = {`https://maps.googleapis.com/maps/api/staticmap?center=${this.props.locationObj.latitude}%2c%20${this.props.locationObj.longitude}&zoom=13&size=600x300&maptype=roadmap&key=${this.props.geoApiKey}`}/>);
+      var renderedMap = (<img id = 'map' src = {`https://maps.googleapis.com/maps/api/staticmap?center=${this.props.locationObj.latitude}%2c%20${this.props.locationObj.longitude}&zoom=13&size=600x300&maptype=roadmap&key=${this.props.geoApiKey}`}/>);
     }else{
       var renderedMap = (<p></p>);
     }

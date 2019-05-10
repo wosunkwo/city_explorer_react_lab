@@ -29,7 +29,7 @@ class Movie extends React.Component {
 
   render(){
     return (
-      <div>
+      <section class = 'movie'>
         <h2>Movies</h2>
         <ul>
         {this.state.resourceResult.length > 0 ? this.state.resourceResult.map((ele,idx) => <li key={idx}>
@@ -38,7 +38,7 @@ class Movie extends React.Component {
         <p>{ ele.overview }</p>
          </li>) : null}
         </ul>
-      </div>
+      </section>
     );
   }
 }

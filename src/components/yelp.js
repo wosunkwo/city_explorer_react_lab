@@ -30,7 +30,7 @@ class Yelp extends React.Component {
 
   render(){
     return (
-      <div>
+      <section class = 'yelp'>
         <h2>Yelp</h2>
         <ul>
         {this.state.resourceResult.length > 0 ? this.state.resourceResult.map((ele,idx) => <li key={idx}>
@@ -39,7 +39,7 @@ class Yelp extends React.Component {
       <img src= { ele.image_url } width='200px'/>
         </li>) : null}
         </ul>
-      </div>
+      </section>
     );
   }
 }
