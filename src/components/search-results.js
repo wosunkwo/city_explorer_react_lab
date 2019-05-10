@@ -1,24 +1,43 @@
 import React from 'react';
-import Result from './result';
+import Weather from './weather';
+import Event from './event';
+import Movie from './movie';
+import Yelp from './yelp';
 
 
-class Search_Form extends React.Component {
+class Search_Result extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render(){
-    console.log(this.props.locationObj);
     return (
-      <React.Fragment>
-        <Result/>
-        <Result/>
-        <Result/>
-        <Result/>
-        <Result/>
-      </React.Fragment>  
+      <div>
+        {this.props.locationObj ? 
+          <Weather
+            locationObj = {this.props.locationObj}
+          />
+        : null}
+     
+     {this.props.locationObj ? 
+          <Event
+            locationObj = {this.props.locationObj}
+          />
+        : null}
+
+{this.props.locationObj ? 
+          <Movie
+            locationObj = {this.props.locationObj}
+          />
+        : null}
+       {this.props.locationObj ? 
+          <Yelp
+            locationObj = {this.props.locationObj}
+          />
+        : null}
+      </div>  
     );
   }
 }
 
-export default Search_Form;
+export default Search_Result;
