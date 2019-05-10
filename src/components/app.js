@@ -28,7 +28,6 @@ class Main extends React.Component {
     super(props);
     this.state = {
       city: '',
-      apiDestination: ['weather', 'movies', 'yelp', 'trails', 'events'],
       geoApiKey: process.env.REACT_APP_GEOCODE_API_KEY
   };
   }
@@ -39,18 +38,6 @@ class Main extends React.Component {
     .then (response => {
       this.state.locationObj = response.body;
       this.setState({locationObjData: locationObj});
-      this.getResource('weather');
-    })
-    .catch(error =>{
-      console.log(error);
-    })
-  };
-
-  getResource = (resource) => {
-    superagent.get(`https://stark-tor-84880.herokuapp.com/${resource}`)
-    .query({data: this.state.locationObj})
-    .then(response => {
-      console.log(response.body);
     })
     .catch(error =>{
       console.log(error);
