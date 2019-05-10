@@ -29,12 +29,12 @@ class Event extends React.Component {
 
   render(){
     return (
-      <div>
+      <section class = 'event'>
         <h2>Events</h2>
         <ul>
         {this.state.resourceResult.length > 0 ? this.state.resourceResult.map((ele,idx) => <li key={idx}> <a href = "{ele.link}"> {ele.name}</a> <p> Event Date: {ele.event_date} </p><p> {ele.summary}</p></li>) : null}
         </ul>
-      </div>
+      </section>
     );
   }
 }

@@ -30,12 +30,12 @@ class Weather extends React.Component {
 
   render(){
     return (
-      <div>
+      <section class = 'weather'>
         <h2>Weather </h2>
         <ul>
         {this.state.resourceResult.length > 0 ? this.state.resourceResult.map((ele,idx) => <li key={idx}> {ele.forecast + ' ' + ele.time } </li>) : null}
         </ul>
-      </div>
+      </section>
     );
   }
 }

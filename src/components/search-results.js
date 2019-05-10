@@ -12,7 +12,7 @@ class Search_Result extends React.Component {
 
   render(){
     return (
-      <div>
+      <div id='div'>
         {this.props.locationObj ? 
           <Weather
             locationObj = {this.props.locationObj}
